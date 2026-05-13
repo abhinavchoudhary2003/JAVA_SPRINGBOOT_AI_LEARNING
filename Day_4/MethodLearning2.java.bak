@@ -1,0 +1,12 @@
+package Day_4;
+class MethodLearning2 
+{
+	public static void main(String[] args) 
+	{
+		Utility m = new Utility();
+		display();
+		
+		String res = m.stringAppend("Abhinav" , "Choudhary");
+		System.out.println(res);
+	}
+}

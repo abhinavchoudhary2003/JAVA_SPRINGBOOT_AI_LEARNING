@@ -1,0 +1,15 @@
+class StringBuilderAndBufferDemo 
+{
+	public static void main(String[] args) 
+	{
+		StringBuilder sb = new StringBuilder("Abhinav");
+		sb.append("Choudhary");
+		System.out.println(sb);
+		
+		
+		// StringBuffer 
+		StringBuffer buffer = new StringBuffer("Sonika");
+		buffer.append("Bala");
+		System.out.println(buffer);
+	}
+}

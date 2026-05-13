@@ -1,0 +1,8 @@
+what we learn in Day 2
+
+1. Identifiers(naming) for classes,methods or variables
+2. Data types in java 
+3.Structure of Java Program
+4. import package
+5.classes and objects 
+6. Operators in java

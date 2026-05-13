@@ -1,0 +1,4 @@
+// Day 3 Learning 
+1. learn about conditions 
+2. learn about loops
+3. learn about Arrays
