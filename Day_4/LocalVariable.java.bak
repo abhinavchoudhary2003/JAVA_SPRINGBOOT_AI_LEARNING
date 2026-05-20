@@ -1,0 +1,15 @@
+class LocalVariable 
+{
+	public static void main(String[] args) 
+	{
+		display();
+	}
+	public static void display(){
+		
+		String s ;
+		System.out.println(s);
+		String s1 = "Abhinav";
+		
+		System.out.println(s1);
+	}
+}
