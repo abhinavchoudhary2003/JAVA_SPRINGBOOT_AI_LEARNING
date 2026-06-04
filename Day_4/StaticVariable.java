@@ -7,7 +7,7 @@ class StaticVariable
 		
 		Student s2 = new Student();
         s2.CollegeName = "CodeForSuccess"; // Student.CollegeName = "CodeForSuccess"; // Because college Name is static variable 
-		s2.display(); // s2 = CodeForSuccess // we cant write like this Student.display(); because display is non static method 
+		s2.display(); // s2 = CodeForSuccess // we can not write like this Student.display(); because display is a non-static method 
 		
 		System.out.println("-------------------------");
 		
@@ -16,3 +16,6 @@ class StaticVariable
 		
 	}
 }
+
+
+

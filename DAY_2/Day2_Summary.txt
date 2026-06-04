@@ -1,4 +1,4 @@
-what we learn in Day 2
+`what we learn in Day 2
 
 1. Identifiers(naming) for classes,methods or variables
 2. Data types in java 

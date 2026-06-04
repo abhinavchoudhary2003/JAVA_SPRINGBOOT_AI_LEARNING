@@ -9,9 +9,9 @@ class MethodLearning1
 		int result = sum(10,20);// directly call sum method because sum method use static and here  declare a variable(result) and assign values to parameters.
 		System.out.println(result); 
 		
-		// create a object because sum1 method did not use static 
+		// create an object because sum1 method did not use static
 		MethodLearning1 m = new MethodLearning1();
-		int result1 = m.sum1(30,40);
+		int result1 = m.sum(30,40);
 		System.out.println(result1); 
 		
 		
