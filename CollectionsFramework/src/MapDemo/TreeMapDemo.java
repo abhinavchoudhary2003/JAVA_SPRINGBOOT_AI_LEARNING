@@ -1,0 +1,16 @@
+package MapDemo;
+
+import java.util.Map;
+import java.util.TreeMap;
+
+public class TreeMapDemo {
+    public static void main(String[] args) {
+        Map<Integer,String> map=new TreeMap<>();
+        map.put(10,"C");
+        map.put(5,"B");
+        map.put(1,"K");
+        map.put(4,"L");
+        // map.put(null,"PP"); // prints  NullPointerException because TreeMap rejects null specifically because ordering depends on comparison, and you can't compare against (or call a method on) something that doesn't exist.
+        System.out.println(map);
+    }
+}
