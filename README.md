@@ -28,7 +28,11 @@ This repository is my personal learning log as I work through **Core Java**, **A
 
 - Build a strong foundation in **Core Java** (OOPs, Collections, Exception Handling, Multithreading, Generics)
 - Get comfortable with **Advanced Java** (Servlets, JDBC, Web Applications)
+- Master Spring Boot and build production-ready REST APIs
+- Master Microservices architecture and design patterns
+- Get hands-on with Docker for containerization and deployment
 - Practice by building small projects alongside theory
+
 
 ## 🗺️ Roadmap
 
