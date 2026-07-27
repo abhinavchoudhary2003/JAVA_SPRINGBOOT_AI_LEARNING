@@ -1,7 +1,7 @@
 public class BillCalculator {
 
    public  static  int calculateTotal(Service[] services, boolean[] selected){
-   // Service[] services -> Parameter 1 — accepts an array of Service objects, here we are not creating an object of Serviceclass
+   // Service[] services -> Parameter 1 — accepts an array of Service objects, here we are not creating an object of Service class
    // Service[] → stores COMPLETE Service object i.e. id, name, price and can call .getPrice(), .getName(), .getId()
    //  Why not int[] or String[]?
 // Because int[] services = {200, 500, 300};  only stores price not id , name  and  cannot call .getPrice(), .getName()

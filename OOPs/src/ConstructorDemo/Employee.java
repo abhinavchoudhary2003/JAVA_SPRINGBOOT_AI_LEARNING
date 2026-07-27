@@ -7,9 +7,9 @@ public class Employee {
     String dept;
 
 
-    // Default Constructor with no parameter
+    // Create our own Default Constructor with no parameter
     // If we don't create this jvm will automatically call this , because this is present internally
-    // If we remove this default constructor ,and we create an object with constructor call,  it shows error in ConstTest.java
+    // If we remove this our own default constructor ,and we create an object with constructor call,  it shows error in ConstTest.java
     // Because jvm removes default constructor when we create our own constructors
     // But you can create own default constructor to avoid this problem
     Employee()
