@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--  Here we represent spring bean using XML approach-->
+
+   <!-- bean definitions here -->
+    <!-- Defining a bean named "dsa" of class DSA -->
+    <!-- Here, BY default bean scope is singleton-->
+    <bean id="dsa" class="org.cfs.DSA" scope="prototype"></bean>  <!-- Now we define bean scope is prototype-->
+
+    <!-- Defining a bean named "std" of class Student,
+    <!- The <property> tag is placed inside "std" because "course" is a property (setter)
+     of the Student class, not of DSA -->
+    <!--  and injecting the "dsa" bean into its "course" property  -->
+    <!-- Here, BY default bean scope is singleton-->
+    <bean id="std" class="org.cfs.Student" scope="prototype">   <!-- Now we define bean scope is prototype-->
+        <!-- Note : By default , IOC uses setter Dependency Injection -->
+        <property name="course" ref="dsa"></property>
+    </bean>
+
+
+</beans>
+
+
