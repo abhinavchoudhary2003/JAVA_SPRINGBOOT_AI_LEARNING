@@ -7,12 +7,12 @@ public class Student {
   Student(){
   }
 
-    // 1st way constructor dependency injection
+    // 1st way to  Define constructor dependency injection
   Student(Course course){
   this.course = course;
   }
 
-    //2nd way Setter dependency injection
+    //2nd way to define Setter dependency injection
     public void setCourse(Course course) {
         this.course = course;
     }
