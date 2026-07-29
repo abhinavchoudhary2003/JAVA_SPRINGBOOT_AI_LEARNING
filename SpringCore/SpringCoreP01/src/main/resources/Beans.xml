@@ -9,18 +9,58 @@
    <!-- bean definitions here -->
     <!-- Defining a bean named "dsa" of class DSA -->
     <!-- Here, BY default bean scope is singleton-->
-    <bean id="dsa" class="org.cfs.DSA" scope="prototype"></bean>  <!-- Now we define bean scope is prototype-->
-
+<!--    <bean id="dsa" class="org.cfs.DSA" ></bean>-->
     <!-- Defining a bean named "std" of class Student,
     <!- The <property> tag is placed inside "std" because "course" is a property (setter)
      of the Student class, not of DSA -->
     <!--  and injecting the "dsa" bean into its "course" property  -->
     <!-- Here, BY default bean scope is singleton-->
-    <bean id="std" class="org.cfs.Student" scope="prototype">   <!-- Now we define bean scope is prototype-->
-        <!-- Note : By default , IOC uses setter Dependency Injection -->
-        <property name="course" ref="dsa"></property>
-    </bean>
+<!--<bean id="std" class="org.cfs.Student" >-->
+<!--  Note : By default , uses setter Dependency Injection but if  we write any property to inject  , it forces to use  setter DI otherwise internally autowire="no" means don't use any DI automatically and if we remove property shows NullpointerException -->
+<!--    <property name="course" ref="dsa"></property>--> <!-- Manually Injecting dependencies-->
+<!--</bean>-->
 
+
+
+    <!-- Now we define bean scope is prototype-->
+<!--    <bean id="dsa" class="org.cfs.DSA" scope="prototype" ></bean>-->
+
+    <!--    <bean id="std" class="org.cfs.Student" scope="prototype">
+              <property name="course" ref="dsa"></property>
+              </bean>
+    -->
+
+    <!-- Here IOC uses first constructor  Dependency Injection  then setter DI because we inject property here because here we  set autowire= constructor  -->
+    <!--  <bean id="std" class="org.cfs.Student" autowire="constructor">
+          <property name="course" ref="dsa"></property>  // manually injecting dependency
+          </bean> -->
+
+
+<!--     Autowiring means it allows Ioc to automatically injecting the dependencies into target spring beans without using property or constructor-args tags           -->
+
+<!--    1st use byName-->
+    <!--    <bean id="course" class="org.cfs.DSA" ></bean>
+       <bean id="std" class="org.cfs.Student" autowire="byName" >
+       </bean>
+       -->
+
+    <!-- 2nd USe byType-->
+
+  <!--  <bean id="dsa" class="org.cfs.DSA" ></bean>  Dsa is a course type-->
+  <!--  <bean id="std" class="org.cfs.Student" autowire="byType" >  In ,Studnet we define Course Type variable , so both type matches so it inject automatically -->
+   <!-- </bean>-->
+
+    <!-- when course interface have two classes, and we are creating two spring beans object  so target spring bean will be confused that which bean object dependency I have to Inject
+     to fix this we have primary or autowire-candidate tags -->
+<!--    <bean id="dsa" class="org.cfs.DSA" ></bean>-->
+<!--    <bean id="Sb" class="org.cfs.SpringBoot" primary="true"></bean>-->
+<!--    <bean id="std" class="org.cfs.Student" autowire="byType" ></bean>-->
+
+     <!-- 3rd use constuctor this is the only autowire that uses constructor injection way-->
+    <bean id="dsa" class="org.cfs.DSA" ></bean>
+    <bean id="std" class="org.cfs.Student" autowire="constructor">
+
+    </bean>
 
 </beans>
 
