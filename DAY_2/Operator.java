@@ -15,7 +15,7 @@ class Operator
 			// Increment(++) and Decrement(--)
 			
 			int c = 9;
-			System.out.println("Preincrement "+ ++c); // print 10 (phele + kro then print)
+			System.out.println("Preincrement "+ ++c); // print 10 (phele ++ kro, then print)
 			System.out.println("postincrement "+ c++); // print 10 (phle print kro then ++) so NOw c =11
 			
 			System.out.println("PreDecrement "+ --c); // print 10 (phle -- then print)
