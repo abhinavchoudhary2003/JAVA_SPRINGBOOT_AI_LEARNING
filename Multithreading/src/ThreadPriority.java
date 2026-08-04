@@ -19,3 +19,11 @@ class  MyThread2 implements Runnable{
         }
     }
 }
+/*
+"Priority doesn't control Thread  execution — it's just a hint to the scheduler. The Task scheduler still decides everything by own, but a higher-priority thread is more likely to get picked when multiple threads are ready to run. It's a suggestion, not a guarantee — so we shouldn't rely on it for correctness, only for rough performance tuning."
+That one line covers the core idea. If they push further, you can add:
+
+"Because it's JVM/OS-dependent" — different platforms honor priority differently, so it's not portable or reliable behavior.
+"If it were a guarantee, low-priority threads could starve forever" — so schedulers deliberately don't obey it strictly.
+"For actual ordering guarantees, we use synchronization — locks, join(), executors — not priority."
+ */
