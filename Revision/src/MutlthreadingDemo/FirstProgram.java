@@ -20,5 +20,6 @@ public class FirstProgram {
  //  t0.run(); // it means no new thread is created and task is executed by main thread only
     MyThread t1 = new MyThread();
     t1.start(); // new thread is  created to execute the task that we define in run() method
+    t1.run();
     }
 }

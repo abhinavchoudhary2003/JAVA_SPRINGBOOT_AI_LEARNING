@@ -13,7 +13,7 @@ public class ExecutorDemo {
             System.out.println("Task executes by "+name);
         };
         //  submit a task to  the threads for execution . now it's decided automatically  by the ExecutorService's internal thread pool logic (which thread handle which task)
-        // here we submit the same task for three times to the threads
+        // here we submit the same task for three times to the three  threads in a pool
 //        for (int i=0;i<3;i++){
 //            executor.submit(task1);
 //        }
@@ -27,13 +27,12 @@ public class ExecutorDemo {
 //            String name=Thread.currentThread().getName();
 //            System.out.println("Task executes by "+name);
 //        };
-//          Here we submit the different three task to the threads
+//        //  Here we submit the different three task to the three  threads
 //         executor.submit(task1);
 //         executor.submit(task2);
 //         executor.submit(task3);
 
-          // when we submit  six tasks to  3 threads
-
+          // when we submit the same task for six times to the three  threads in a pool
         for (int i=0;i<6;i++){
             executor.submit(task1);
         }

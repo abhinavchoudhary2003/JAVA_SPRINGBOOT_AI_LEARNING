@@ -18,4 +18,4 @@ public class RunnableReturnDemo {
 
 
 // output : sending email pool-1-thread-1
-// no result because run() is a void method
+// no result because run()  method return type is void

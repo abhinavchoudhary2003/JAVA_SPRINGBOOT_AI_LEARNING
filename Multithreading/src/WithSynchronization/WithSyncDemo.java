@@ -8,7 +8,8 @@ class BankAccount
 
 
      // synchronized with method
-/*   public void withdraw(int amount)
+     /*
+ public synchronized void withdraw(int amount)
     {
         if(bal>=amount)
         {
@@ -30,17 +31,18 @@ class BankAccount
             System.out.println("Not enough balance for "+Thread.currentThread().getName());
         }
     }
+    */
 
- */
 
     public void withdraw(int amount)
     {
         if(bal>=amount)
         {
-            System.out.println();
-            System.out.println(Thread.currentThread().getName()+" is going to withdraw ₹ "+amount+ " Total bal : "+bal);
+//            System.out.println();
+//            System.out.println(Thread.currentThread().getName()+" is going to withdraw ₹ "+amount+ " Total bal : "+bal);
             try {
-                Thread.sleep(100);
+                System.out.println(Thread.currentThread().getName()+" is going to withdraw ₹ "+amount+ " Total bal : "+bal);
+                Thread.sleep(10000);
             }
             catch (InterruptedException e)
             {
@@ -58,6 +60,7 @@ class BankAccount
             System.out.println("Not enough balance for "+Thread.currentThread().getName());
         }
     }
+
 }
 
 

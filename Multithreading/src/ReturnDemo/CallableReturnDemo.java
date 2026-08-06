@@ -10,14 +10,15 @@ public class CallableReturnDemo {
           // assign a task
           // this is inside main thread, but it will execute by pool threads
         Callable<Integer> email = () ->{
-            System.out.println("sending email...");
+         //   System.out.println(Thread.currentThread().getName()); // prints pool-1-thread-1
+            System.out.println("sending email by ... "+Thread.currentThread().getName());
             Thread.sleep(10000); // this does not show error here beacuse callable already throws exception internally
             return 200;
         };
 
-        Future<Integer> future = executorService.submit(email); // execute by main thread
+        Future<Integer> future = executorService.submit(email); // execute by main thread and submit() is used to execute task
 
-        System.out.println("doing the work..."); // main thread
+        System.out.println("doing the work by ..."+Thread.currentThread().getName()); // main thread
 
         Thread.sleep(2000); // main sleeo for 2 sec
         Integer res = future.get(); // main thread  call future.get() but it will block here for 10 sec  becuase email task is not finished yet and after waiting email task returns 200
