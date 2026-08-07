@@ -9,5 +9,11 @@ public class UnboxingDemoUsingValuemethod {
         Character c1='a';
         char c=c1.charValue(); // char c = c1; unboxing
         System.out.println(c);
+
+
+        // AutoUnboxing
+        Integer i = 300;
+        int j = i;
+        System.out.println(j);
     }
 }
