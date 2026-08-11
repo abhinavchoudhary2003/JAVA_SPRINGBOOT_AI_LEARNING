@@ -15,9 +15,9 @@ public class EnumerationDemo {
         vector.add(40);
         System.out.println(vector);
 
-        Enumeration<Integer> enumeratoion = vector.elements();
-        while(enumeratoion.hasMoreElements()){
-            Integer data = enumeratoion.nextElement();
+        Enumeration<Integer> enumeratoion = vector.elements(); // .elements() is used to create an object of Enumeration
+        while(enumeratoion.hasMoreElements()){ //hasMoreElements() use to check that  data is present in collection
+            Integer data = enumeratoion.nextElement();// if data found , then nextElement() is used to fetch the data
             System.out.print(data +" ");
         }
         System.out.println();

@@ -5,8 +5,8 @@ import java.util.Set;
 public class SetDemo {
     public static void main(String[] args) {
         Set<Integer> set = new HashSet<>();
-        // order is not preseverd means it is not coming in preserve  order
-        // no duplicate value
+        // order is not preseverd means it is not coming in preserve insertion  order
+        // Doesn't allow duplicate value
         set.add(10);
         set.add(20);
         set.add(30);
