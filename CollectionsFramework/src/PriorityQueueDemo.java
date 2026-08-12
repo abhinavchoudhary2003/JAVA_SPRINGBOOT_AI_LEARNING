@@ -12,8 +12,8 @@ public class PriorityQueueDemo{
 
         // smaller value gets highest priority
         System.out.println(pq);
-        System.out.println(pq.poll());
-        System.out.println(pq.poll());
+        System.out.println(pq.poll()); // ✅ smallest
+        System.out.println(pq.poll()); // ✅ Next  smallest
 
 
         System.out.println("-----------------------------------");
@@ -26,8 +26,8 @@ public class PriorityQueueDemo{
 
         // highest value gets highest priority because of Comparator.reverseOrder()
         System.out.println(pq1);
-        System.out.println(pq1.poll());
-        System.out.println(pq1.poll());
+        System.out.println(pq1.poll()); // ✅ largest
+        System.out.println(pq1.poll()); //  ✅  next largest
 
 
     }

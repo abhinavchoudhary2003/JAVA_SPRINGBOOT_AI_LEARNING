@@ -103,3 +103,25 @@ class SalaryComparator implements Comparator<Employee> {
 }
 
  */
+
+
+ /*
+ You can allow null keys by supplying a Comparator (like Comparator.nullsFirst()) that defines how null should be treated in the ordering.
+ import java.util.*;
+
+public class TreeMapNullFirst {
+    public static void main(String[] args) {
+        TreeMap<String, String> map = new TreeMap<>(
+            Comparator.nullsFirst(Comparator.naturalOrder())
+        );
+
+        map.put("banana", "yellow fruit");
+        map.put("apple", "red fruit");
+        map.put(null, "unknown fruit");
+        map.put("cherry", "small red fruit");
+
+        System.out.println(map);
+        // {null=unknown fruit, apple=red fruit, banana=yellow fruit, cherry=small red fruit}
+    }
+}
+  */
